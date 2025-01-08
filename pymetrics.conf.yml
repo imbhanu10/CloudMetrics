@@ -1,0 +1,53 @@
+---
+# Default configuration file for Cloudmetrics
+# Modify values with caution. Altering keys may cause erratic behavior.
+# It is recommended to back up this file before making changes.
+
+log_files:
+  # Log files to monitor
+  - /var/log/cron.log
+  - /var/log/auth.log 
+  - /var/log/sudo.log
+
+log_report_format: plain_text
+# Available formats:
+# - plain_text
+# - csv
+# - json
+
+delete_logs: True
+# Set to False to disable log deletion
+
+expire_logs: 7
+# Delete logs older than this many days
+# Set to None to disable log expiration
+
+notify: False
+# Set to True to enable email notifications
+
+email_address: 
+# Email address for notifications (if enabled)
+
+url: https://google.com
+# URL for network connectivity testing
+
+timeout: 5
+# Connection timeout in seconds
+
+web_server:
+  logs:
+    - /var/log/nginx
+    - /var/log/apache2 # Debian-based
+    - /var/log/httpd   # Red Hat-based
+  data:
+    - /var/www/nginx
+    - /var/www/apache2
+    - /var/www/httpd
+
+cloud:
+  active: true
+  # Set to false to disable cloud logging features
+  config:
+    - region: us-east-1
+  s3_bucket_name: cloudmetrics
+  # S3 bucket name must be unique and already exist in your account

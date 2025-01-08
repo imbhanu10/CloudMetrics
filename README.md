@@ -1,0 +1,3 @@
+cloudmetrics is an efficient logging tool designed for capturing and analyzing key system data in Unix-like environments. This tool automatically processes and aggregates log data, saving users from manually parsing multiple logs. It supports customization via YAML configuration files, containerization, and integrates with cloud services like AWS S3 for storage. Users can track system health and receive alerts about log uploads.
+
+Key features include cloud integration with AWS, log management, configurable logging formats, email reports, and automated garbage collection. This ongoing project ensures enhanced performance, portability, and continuous feature updates.

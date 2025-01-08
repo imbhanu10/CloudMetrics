@@ -1,0 +1,8 @@
+boto3
+distro
+python-dotenv
+humanize
+netifaces
+psutil
+PyYAML
+requests

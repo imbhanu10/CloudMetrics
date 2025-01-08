@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  cloudmetrics:
+    build: ./
+    container_name: cloudmetrics
+    env_file: ./cloud/.env
+    volumes:
+      # Bind Mount for local logs directory
+      - ./logs:/cloudmetrics/logs
+      # Anonymous Volume for sys_info logs
+      - /cloudmetrics/logs/sys_info
+      # Named Volume for persistent logs storage
+      - logs:/cloudmetrics/logs
+
+volumes:
+  logs:
