@@ -48,6 +48,6 @@ cloud:
   active: true
   # Set to false to disable cloud logging features
   config:
-    - region: us-east-1
+    - region: ap-south-1
   s3_bucket_name: cloudmetrics
   # S3 bucket name must be unique and already exist in your account
